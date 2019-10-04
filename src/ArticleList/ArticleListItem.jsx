@@ -6,7 +6,9 @@ const ArticleListItem = ({article}) => {
           <h3>{article.title}</h3>
           <p>{article.shortText}</p>
           <p> <time dateTime={article.pubDate}>{article.pubDate}</time>
-          <button onClick={() => alert(`${article.slug}`)}>Show article slug</button></p>
+          <button onClick={() => {
+                    return alert(`${article.slug}`);
+                }}>Show article slug</button></p>
           
         </div>
     )
