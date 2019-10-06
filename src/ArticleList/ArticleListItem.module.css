@@ -1,0 +1,21 @@
+﻿.styles {
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 10px 25px 20px;
+    width: 55rem;
+    border: 2px solid #CB0000;
+    background-color: #EEEEEE;
+}
+
+.title {
+    color: red;
+}
+
+.main {
+    text-align: right;
+}
+
+.dateTime {
+    font-weight: bold;
+}
