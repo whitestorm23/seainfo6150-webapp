@@ -4,7 +4,7 @@ import styles from "./SlugButton.module.css";
 
 const SlugButton = () => (
     <div className={styles.button}>
-        <button onClick={() => alert(`${styles.slug}`)}><address><i> {author}</i></address></button>
+        <button onClick={() => alert(`${styles.button}`)}><address><i> {author}</i></address></button>
     </div>
 );
 

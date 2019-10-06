@@ -19,3 +19,7 @@
 .dateTime {
     font-weight: bold;
 }
+.slug {
+    color: white;
+    background-color: red;
+}

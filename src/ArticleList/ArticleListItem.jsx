@@ -24,7 +24,7 @@ class ArticleListItem extends React.Component {
                 <br></br>
                 <time className={styles.dateTime} dateTime={this.props.year}>{this.props.date}</time>
                 < body className={styles.main} >
-                    <button onClick={() => alert(`${styles.slug}`)}><address><i> { this.props.author}</i></address></button>
+                    <button className={styles.slug} onClick={() => alert(`${styles.slug}`)}><address> { this.props.author}</address></button>
                 </body >
             </main>
         );
