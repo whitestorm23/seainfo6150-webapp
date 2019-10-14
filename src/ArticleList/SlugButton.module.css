@@ -1,5 +1,10 @@
 ﻿.styles {
-    background: red;
+    background-color: red; /* Green */
+    border: none;
     color: white;
-    float: right;
+    padding: 3px 4px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2px;
 }

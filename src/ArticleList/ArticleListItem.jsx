@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './SlugButton.module.css';
+import ArticleImage from "./ArticleImage";
 
 class ArticleListItem extends React.Component {
     constructor(props) {
@@ -11,22 +12,29 @@ class ArticleListItem extends React.Component {
             author: this.props.author,
             date: this.props.date,
             shortText: this.props.shortText,
-            year: this.props.year
+            year: this.props.year,
+            image: this.props.image
         }
     }
 
     render() {
         return (
-            <main className={styles.styles}>
-
-                <h1 className={styles.title}>{this.props.title}</h1>
-                <p>{this.props.shortText}</p>
-                <br></br>
-                <time className={styles.dateTime} dateTime={this.props.year}>{this.props.date}</time>
-                < body className={styles.main} >
-                    <button className={styles.slug} onClick={() => alert(`${styles.slug}`)}><address> { this.props.author}</address></button>
-                </body >
-            </main>
+            <div className={styles.box}>
+                <div className={styles.image}>
+                    <ArticleImage url={this.props.url} title={this.props.title} />
+                </div>
+                <div className={styles.container}>
+                    <body>
+                        <section>
+                        <h1 className={styles.title}>{this.props.title}</h1>
+                        <p className={styles.shortText}>{this.props.shortText}</p>
+                        <time className={styles.dateTime} dateTime={this.props.year}>{this.props.date}</time>          
+                 
+                            <button className={styles.slug} onClick={() => alert(`${styles.slug}`)}><address> {this.props.author}</address></button>
+                        </section>
+                    </body>
+                </div>
+            </div>
         );
     }
 }

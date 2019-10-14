@@ -1,7 +1,62 @@
-﻿.articles {
-    background: #999;
-    padding: 50px;
-    border-style: dashed;
-    border-color: #666666;
-    width: 60rem;
+﻿.container {
+    background-color: #FAFAFA;
+    display: flex;
+    border: 1px solid #242323;
+    flex-flow: row wrap;
+    padding-bottom: 5px;
+    justify-content: space-between;
+}
+
+.heading {
+    height: 50px;
+    width: 100%;
+    background-color: #ED5736;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headingText {
+    font-size: 30px;
+    color: #FAFAFA;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px;
+    padding: 15px 0;
+}
+
+.titleTime {
+    color: #FAFAFA;
+    display: inline-block;
+    text-align: center;
+    padding: 60px 0;
+    padding-right: 50px;
+}
+
+.body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 5px;
+    padding: 1em;
+    background: #8b8b8b;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    padding-bottom: 30px;
+}
+
+.footer {
+    height: 150px;
+    width: 100%;
+    background-color: #ED5736;
+    padding-bottom: 0px;
+    margin: 5px;
+}
+
+.footerText {
+    font-size: 10px;
+    color: #FAFAFA;
+    padding-left: 30px;
+    padding-top: 30px;
+    font-weight: normal;
 }
