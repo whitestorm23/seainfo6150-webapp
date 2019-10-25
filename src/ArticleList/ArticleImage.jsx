@@ -1,16 +1,18 @@
-﻿import React from "react";
-import PropTypes from "prop-types";
-import styles from "./ArticleImage.module.css";
+﻿import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './ArticleImage.module.css'
 
-const ArticleImage = ({ url, title }) => (
-    <div className={styles.figure}>
-        <img title={title} className={styles.image} src={url} alt="alt test" />
-    </div>
-);
+const ArticleImage = props => {
+    return (
+        <img className={styles.image}
+            src={props.article.image._url}
+            alt={props.article.title}>
+        </img>
+    );
+};
 
 ArticleImage.propTypes = {
-    url: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
+    article: PropTypes.object.isRequired
 };
 
 export default ArticleImage;

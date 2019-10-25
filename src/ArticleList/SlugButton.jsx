@@ -1,16 +1,17 @@
-﻿import React from "react";
-import PropTypes from "prop-types";
-import styles from "./SlugButton.module.css";
+﻿import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './SlugButton.module.css'
 
-const SlugButton = () => (
-    <div className={styles.button}>
-        <button onClick={() => alert(`${styles.button}`)}><address><i> {author}</i></address></button>
-    </div>
-);
+const SlugButton = props => {
+    return (
+        <button className={styles.button} onClick={() => alert(props.article.slug)}>
+            {props.article.author}
+        </button>
+    );
+};
 
 SlugButton.propTypes = {
-    url: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
+    article: PropTypes.object.isRequired,
 };
 
 export default SlugButton;

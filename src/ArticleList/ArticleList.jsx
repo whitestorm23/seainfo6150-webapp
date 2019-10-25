@@ -1,31 +1,22 @@
-﻿import React from 'react';
+﻿
+import React from "react";
 import PropTypes from 'prop-types';
-import ArticleListItem from './ArticleListItem';
-import module from "./ArticleList.module.css";
+import Item from './ArticleListItem';
+import styles from './ArticleList.module.css'
 
-const ArticleList = ({ articles }) => (
-    <ul module={module.articles}>
-
-        {
-            // this iterates through the articles JSON and
-            // calls your ArticleListItem component for each article
-            Object.values(articles).map(article => {
-                return <ArticleListItem
-                    key={article.slug}
-                    title={article.title}
-                    date={article.pubDate}
-                    year={article.pubYear}
-                    author={article.author}
-                    shortText={article.shortText}
-                    url={article.image._url}
-                />
-            })
-        }
-    </ul>
-);
+const ArticleList = props => {
+    return (
+        <ul className={styles.body}>
+            {props.articles.map(article => (
+                <li key={article.slug}>
+                    <Item article={article}></Item>
+                </li>
+            ))}
+        </ul>
+    );
+};
 
 ArticleList.propTypes = {
-    articles: PropTypes.object.isRequired
-}
-
+    articles: PropTypes.array.isRequired
+};
 export default ArticleList;
