@@ -8,3 +8,23 @@
     border-width: 8px;
     margin-right: 1em;
 }
+@media (min-width: 400px) {
+    .image {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+@media (min-width: 800px) {
+    .image {
+        width: 360px;
+        height: 240px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .image {
+        width: 720px;
+        height: 480px;
+    }
+}

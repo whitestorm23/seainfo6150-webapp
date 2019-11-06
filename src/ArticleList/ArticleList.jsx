@@ -6,12 +6,14 @@ import styles from './ArticleList.module.css'
 
 const ArticleList = props => {
     return (
-        <ul className={styles.body}>
-            {props.articles.map(article => (
-                <li key={article.slug}>
-                    <Item article={article}></Item>
-                </li>
-            ))}
+        <ul>
+            <h1 className={styles.headline}>Articles</h1>
+            <div className={styles.gridsection}>
+                {props.articles.map(article => (
+                    <li key={article.slug}>{<Item article={article}></Item>}</li>
+                ))}
+            </div>
+
         </ul>
     );
 };
